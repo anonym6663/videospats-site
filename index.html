@@ -38,7 +38,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://sites.google.com/view/juan-luis-gb/home">
+      <a class="navbar-item" href="">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -135,8 +135,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        By explicitly modeling view-dependent effects (VDE) from a single image, our NVSVDE-Net renders more realistic
-        views with clean geometries.
+        Our VideoSpats Fig 1.
       </h2>
     </div>
   </div>
@@ -161,8 +160,7 @@
       </div>
     </div>
     <h2 class="subtitle has-text-centered">
-      Our NVSVDE-Net is the <i>first</i> single-view NVS method to be trained in a completely self-supervised manner.
-      Neither depths nor pose annotations are required, while the other methods rely on given depths and/or camera poses,
+      Our VideoSpats
     </h2>
   </div>
 </section>
@@ -208,9 +206,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        We <i>firstly</i> propose a single view NVS method with VDEs.
-        By recognizing camera motion priors and negative disparities govern view-dependent appearance at the input view,
-        we can model VDEs as the negative disparities in the scene induced by the target camera motion.
+        We <i>firstly</i> propose videospats.
       </h2>
     </div>
   </div>
@@ -224,21 +220,14 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <!-- Method. -->
-        <h2 class="title is-3">Proposed Single-View NVS Method</h2>
-        <h3 class="title is-3">Modeling View-Dependent Effects (VDE)</h3>
+        <h2 class="title is-3">Proposed VideoSpats</h2>
+        <h3 class="title is-3">Modeling time dependent appearance</h3>
         <div class="content has-text-justified">
-          We observe a strong prior in (view-dependent effects) VDEs, VDEs `follow' the camera motion (no disparities).
+          bla bla
         </div>
         <img id="projections" height="100%" src="./static/images/Projections.jpg">
         <h2 class="subtitle has-text-centered">
-          (a) We synthesize target VDEs (black dots) induced on the input view <i>I</i> by re-sampling <i>I</i>
-          along the negative depth region of the epipolar line (green dots). In contrast, 3D geometry does present
-          disparities between views (blue dots).
-          (b) VDEs present disparities
-          relative to their reflective surfaces in the opposite direction than the projection of the reflective
-          surface itself.
-          (c) and (d) VDE disparity due to novel camera poses is proportional to the
-          reflective surface disparity. The closer the reflective surface, the larger the VDE disparity.
+          bla bla bla
         </h2>
         <br/>
         <br/>
@@ -246,11 +235,7 @@
         <h3 class="title is-3">Overall Network Architecture</h3>
         <div class="content has-text-justified">
           <p>
-            The proposed NVSVDE-Net models VDEs at the input view as the negative scene disparities under
-            the target camera motion <i>R</i><sub>c</sub> | <b><i>t</i></b><sub>c</sub>.
-            Novel views are estimated in two stages.
-            Firstly with coarse fixed ray samples <i>t</i><sub>i</sub>, then with refined adaptive sampling distances
-            <i>t</i><sup>*</sup><sub>k</sub>.
+            The proposed model.
           </p>
         </div>
         <img id="arch" height="100%" src="./static/images/overall_arch.jpg">
@@ -259,11 +244,11 @@
         <br/>
         <!--/ Method. -->
 
-        <!-- Results on RE10k. -->
-        <h2 class="title is-3">Results on RealEstate10k</h2>
+        <!-- Results -->
+        <h2 class="title is-3">Results</h2>
         <div class="content has-text-justified">
           <p>
-            Our results on the RealEstate10k dataset (RE10k).
+            Our results.
           </p>
         </div>
         <video id="re10_res" autoplay muted loop playsinline height="100%">
@@ -272,38 +257,7 @@
         <br/>
         <br/>
         <br/>
-        <!--/ Results on RE10k. -->
-
-        <!-- Results on MC. -->
-        <h2 class="title is-3">Results on the MannequinChallenge Dataset</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our results on the MannequinChallenge dataset (MC).
-          </p>
-        </div>
-        <video id="MC_res" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/MC_results.mp4" type="video/mp4">
-        </video>
-        <br/>
-        <br/>
-        <br/>
-        <!--/ Results on MC. -->
-
-        <!-- Extreme NVS. -->
-        <h2 class="title is-3">Extreme NVS</h2>
-        <div class="content has-text-justified">
-          <p>
-            We trained our NVSVDE-Net to render views that are at most 16 frames apart from the single-image input.
-            In this experiment, we render views equivalent to 40 frames apart from the input view.
-            Despite the inherent challenges associated with extreme Novel View Synthesis, our method consistently
-            produces realistic views, albeit with certain observable artifacts, as anticipated in any single-view NVS framework.
-          </p>
-        </div>
-        <video id="ext_nvs" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/Extreme_NVS.mp4" type="video/mp4">
-        </video>
-        <br/>
-        <!--/ Extreme NVS. -->
+        <!--/ Results -->
 
       </div>
     </div>
